@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "iM/FEQP38OcCN1amIlCoYrJTAvnN6+uOoi3VTIWRtlg=",
+  "Source": "userPermissionApi",
+  "BasePath": "_content/userPermissionApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

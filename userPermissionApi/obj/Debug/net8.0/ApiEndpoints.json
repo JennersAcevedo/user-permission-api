@@ -1,0 +1,65 @@
+[
+  {
+    "ContainingType": "userPermissionApi.Controllers.PermisoController",
+    "Method": "CrearPermiso",
+    "RelativePath": "api/Permiso",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "userPermissionApi.CQRS.commands.CreatePermisoCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "userPermissionApi.Controllers.PermisoController",
+    "Method": "ObtenerTodosLosPermisos",
+    "RelativePath": "api/Permiso",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "userPermissionApi.Controllers.PermisoController",
+    "Method": "ObtenerPermiso",
+    "RelativePath": "api/Permiso/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "userPermissionApi.Controllers.PermisoController",
+    "Method": "EditarPermiso",
+    "RelativePath": "api/Permiso/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "userPermissionApi.CQRS.commands.UpdatePermisoCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

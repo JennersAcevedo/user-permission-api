@@ -1,0 +1,165 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "userPermissionApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Permiso": {
+      "post": {
+        "tags": [
+          "Permiso"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePermisoCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePermisoCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePermisoCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Permiso"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Permiso/{id}": {
+      "get": {
+        "tags": [
+          "Permiso"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Permiso"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePermisoCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePermisoCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePermisoCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CreatePermisoCommand": {
+        "type": "object",
+        "properties": {
+          "nombreEmpleado": {
+            "type": "string",
+            "nullable": true
+          },
+          "apellidoEmpleado": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoPermisoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaPermiso": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdatePermisoCommand": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombreEmpleado": {
+            "type": "string",
+            "nullable": true
+          },
+          "apellidoEmpleado": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoPermiso": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaPermiso": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

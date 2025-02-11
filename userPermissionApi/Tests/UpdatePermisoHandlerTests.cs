@@ -3,9 +3,6 @@ using userPermissionApi.Models;
 using userPermissionApi.Data;
 using userPermissionApi.CQRS.commands;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace userPermissionApi.Tests

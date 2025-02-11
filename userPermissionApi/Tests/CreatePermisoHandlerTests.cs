@@ -33,7 +33,7 @@ namespace userPermissionApi.Tests
         [Fact]
         public async Task Handle_DeberiaCrearPermiso_CuandoDatosValidos()
         {
-            // Arrange: Crear el comando con los datos de prueba
+            // Crear el comando con los datos de prueba
             var command = new CreatePermisoCommand
             {
                 nombreEmpleado = "Juan",
@@ -48,7 +48,7 @@ namespace userPermissionApi.Tests
             _mockUnitOfWork.Setup(uow => uow.SaveChangesAsync()).Returns(Task.FromResult(1));
             var resultado = await _handler.Handle(command, CancellationToken.None);
 
-            // Assert: Verificar que el permiso fue creado correctamente
+            //Verificar que el permiso fue creado correctamente
             Assert.NotNull(resultado);
             Assert.Equal(command.nombreEmpleado, resultado.nombreEmpleado);
             Assert.Equal(command.apellidoEmpleado, resultado.apellidoEmpleado);
